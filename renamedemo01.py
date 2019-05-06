@@ -39,7 +39,7 @@ def all_folder_rename_001(path):
 
 if __name__=="__main__":
     path = 'C:/Users/Silvio/Desktop/四川省成都市青白江区2019-SC-024/'
-    all_folder_rename_001(path)
+    #all_folder_rename_001(path)
 '''
     f = os.listdir(path)
     j = []
