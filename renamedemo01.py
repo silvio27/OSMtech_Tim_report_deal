@@ -1,8 +1,10 @@
 
 # -*- coding: utf-8 -*-
 import os
+import re
 
 def rename_001(path,folder):
+
     path = path + folder +'/'
     f = os.listdir(path)
     n = 0
@@ -19,12 +21,15 @@ def rename_001(path,folder):
             print('error')
 
         os.renames(path+f[n], path+newname)
-        n +=1
+        n += 1
     print('ALL ' + str(n) + ' Done')
     print(j)
 
 
 def all_folder_rename_001(path):
+
+    path = path.replace('\\','/')
+    path = path + '/'
     f = os.listdir(path)
     j = []
     for i in f:
@@ -38,14 +43,6 @@ def all_folder_rename_001(path):
 
 
 if __name__=="__main__":
-    path = 'C:/Users/Silvio/Desktop/四川省成都市青白江区2019-SC-024/'
-    #all_folder_rename_001(path)
-'''
-    f = os.listdir(path)
-    j = []
-    for i in f:
-        j.append(i)
-        print(i)
-    print(j)
-'''
+    path = r'C:\Users\Silvio\Desktop\四川省成都市青白江区2019-SC-024\待整理2'
+    all_folder_rename_001(path)
 
