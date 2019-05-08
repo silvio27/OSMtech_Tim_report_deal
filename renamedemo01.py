@@ -22,7 +22,7 @@ def rename_001(path,folder):
 
         os.renames(path+f[n], path+newname)
         #将文件路径导出到dir
-        add_file_path(path1, 'dir', path+newname)
+        add_file_path(path1, 'dir', path+newname + '\t'+ newname)
 
         n += 1
     print('ALL ' + str(n) + ' Done')
